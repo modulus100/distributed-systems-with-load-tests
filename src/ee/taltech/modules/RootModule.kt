@@ -1,11 +1,14 @@
 package ee.taltech.modules
 
-import ee.taltech.routes.registerBaseRoutes
+import ee.taltech.kafka.buildProducer
+import ee.taltech.routes.baseRoutes
+import ee.taltech.routes.playerRoutes
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.http.*
 import io.ktor.request.*
 import io.ktor.response.*
+import io.ktor.routing.*
 import io.ktor.serialization.*
 import io.ktor.server.engine.*
 import org.slf4j.event.Level
@@ -13,7 +16,6 @@ import org.slf4j.event.Level
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
-    // Dependencies
     install(ContentNegotiation) {
         json()
     }
@@ -53,15 +55,9 @@ fun Application.module(testing: Boolean = false) {
     }
 
     // Routes
-    registerBaseRoutes()
-
-    // Start stop handlers
-    environment.monitor.subscribe(ApplicationStarted) {
-        println("My app is ready to roll")
-    }
-
-    environment.monitor.subscribe(ApplicationStopped) {
-        println("Time to clean up")
+    install(Routing) {
+        baseRoutes()
+        playerRoutes(buildProducer())
     }
 }
 

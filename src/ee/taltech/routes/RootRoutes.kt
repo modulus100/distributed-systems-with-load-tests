@@ -16,9 +16,3 @@ fun Route.baseRoutes() {
         }
     }
 }
-
-fun Application.registerBaseRoutes() {
-    routing {
-        baseRoutes()
-    }
-}
