@@ -1,0 +1,12 @@
+{
+  "name": "consumer-microservice",
+  "version": "1.0.0",
+  "description": "kafka consumer",
+  "main": "consumer.js",
+  "scripts": {},
+  "author": "taltech",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^1.15.0"
+  }
+}

@@ -1,3 +1,4 @@
 .gradle
 build/
 .idea
+consumer-microservice/node_modules

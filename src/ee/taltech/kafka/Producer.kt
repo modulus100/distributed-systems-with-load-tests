@@ -11,6 +11,7 @@ import kotlin.coroutines.resumeWithException
 
 fun <K, V> buildProducer(): KafkaProducer<K, V> =
     KafkaProducer(Properties().apply {
+        this["client.id"] = "kafka-producer"
         this["bootstrap.servers"] = "localhost:9092"
         this["key.serializer"] = StringSerializer::class.java
         this["value.serializer"] = StringSerializer::class.java
