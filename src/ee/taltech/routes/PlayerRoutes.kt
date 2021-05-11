@@ -11,6 +11,7 @@ import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import org.apache.kafka.clients.producer.KafkaProducer
 import org.apache.kafka.clients.producer.ProducerRecord
+import java.time.Instant
 
 const val topic = "Topic1"
 
@@ -21,7 +22,7 @@ fun Route.playerRoutes(producer: KafkaProducer<Long, String>) {
             val scoreJson = Json.encodeToString(score)
 
             producer.sendMessage(ProducerRecord<Long, String>(topic, scoreJson))
-            call.respond(HttpStatusCode.Accepted, PlayerScore(1, 10))
+            call.respond(HttpStatusCode.Accepted, score)
         }
     }
 }
