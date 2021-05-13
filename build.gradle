@@ -18,10 +18,12 @@ plugins {
 group 'ee.taltech'
 version '0.0.1-SNAPSHOT'
 mainClassName = "io.ktor.server.netty.EngineMain"
+//mainClassName = "ee.taltech.ApplicationKT"
 
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
-    kotlinOptions {
-        jvmTarget = "1.8"
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
     }
 }
 
