@@ -1,7 +1,7 @@
-package ee.taltech.routes
+package routes
 
-import ee.taltech.kafka.sendMessage
-import ee.taltech.models.PlayerScore
+import kafka.sendMessage
+import models.PlayerScore
 import io.ktor.application.*
 import io.ktor.http.*
 import io.ktor.request.*

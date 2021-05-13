@@ -1,6 +1,13 @@
-const { Kafka, logLevel } = require("kafkajs")
+const { Kafka, logLevel } = require("kafkajs");
+const isDocker = require('is-docker');
 
-const brokers = ["localhost:9092"]
+if (isDocker()) {
+    console.log("Running in docker")
+} else {
+    console.log("Running locally")
+}
+
+const brokers = isDocker() ? ["kafka:9093"] : ["localhost:9092"]
 const topic = "Topic1"
 const clientId = "kafka-consumer"
 

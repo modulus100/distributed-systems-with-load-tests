@@ -1,8 +1,8 @@
-package ee.taltech.modules
+package modules
 
-import ee.taltech.kafka.buildProducer
-import ee.taltech.routes.baseRoutes
-import ee.taltech.routes.playerRoutes
+import kafka.buildProducer
+import routes.baseRoutes
+import routes.playerRoutes
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.http.*

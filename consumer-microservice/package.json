@@ -7,6 +7,7 @@
   "author": "taltech",
   "license": "ISC",
   "dependencies": {
+    "is-docker": "^2.2.1",
     "kafkajs": "^1.15.0"
   }
 }

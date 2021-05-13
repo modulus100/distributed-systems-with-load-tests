@@ -2,3 +2,4 @@
 build/
 .idea
 consumer-microservice/node_modules
+apache-jmeter-5.4.1

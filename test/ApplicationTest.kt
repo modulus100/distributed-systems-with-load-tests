@@ -3,7 +3,7 @@ package ee.taltech
 import io.ktor.http.*
 import kotlin.test.*
 import io.ktor.server.testing.*
-import ee.taltech.modules.module
+import modules.module
 
 class ApplicationTest {
     @Test
