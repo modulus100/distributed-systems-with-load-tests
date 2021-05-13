@@ -10,7 +10,8 @@ and **Docker**.
 Send post requests to the kafka broker over the gateway api, when a load on 
 a CPU is getting to high the kubernetes adds additional instance to balance 
 a load between multiply instances. There is also a consumer which prints out all
-messages he receives.
+messages he receives. All this can be run inside the Kubernetes cluster to
+emulate autoscaling under a high load.
 
 
 ### Structure
@@ -46,8 +47,10 @@ messages he receives.
 
 ## Interfaces overview
 
-* ) Api gateway
-* ) Kafka broker
-* ) node consumer
+* Api gateway
+* Kafka broker
+* node consumer
+
+
 
 
