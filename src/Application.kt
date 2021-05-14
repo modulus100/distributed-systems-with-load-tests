@@ -8,10 +8,10 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.serialization.*
 import io.ktor.server.engine.*
-import kafka.buildProducer
+import ee.taltech.ee.taltech.kafka.buildProducer
 import org.slf4j.event.Level
-import routes.baseRoutes
-import routes.playerRoutes
+import ee.taltech.ee.taltech.routes.baseRoutes
+import ee.taltech.ee.taltech.routes.playerRoutes
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 

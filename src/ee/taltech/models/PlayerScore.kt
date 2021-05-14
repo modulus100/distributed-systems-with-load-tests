@@ -1,4 +1,4 @@
-package models
+package ee.taltech.ee.taltech.models
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable

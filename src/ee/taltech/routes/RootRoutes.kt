@@ -1,4 +1,4 @@
-package routes
+package ee.taltech.ee.taltech.routes
 
 import io.ktor.application.*
 import io.ktor.http.*

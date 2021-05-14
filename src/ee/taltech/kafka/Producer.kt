@@ -1,4 +1,4 @@
-package kafka
+package ee.taltech.ee.taltech.kafka
 
 import kotlinx.coroutines.suspendCancellableCoroutine
 import org.apache.kafka.clients.producer.KafkaProducer

@@ -9,21 +9,19 @@ buildscript {
 }
 
 plugins {
+    id 'application'
     id 'org.jetbrains.kotlin.jvm' version "$kotlin_version"
     id 'org.jetbrains.kotlin.plugin.serialization' version "$kotlin_version"
-    id 'application'
-    id 'java'
 }
 
 group 'ee.taltech'
 version '0.0.1-SNAPSHOT'
 mainClassName = "io.ktor.server.netty.EngineMain"
-//mainClassName = "ee.taltech.ApplicationKT"
 
 
-jar {
-    manifest {
-        attributes 'Main-Class': mainClassName
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
 

@@ -38,7 +38,6 @@ services:
 
   gateway-api:
     build: .
-    command: bin/app $BACKEND_OPTIONS
     ports:
       - "8080:8080"
     depends_on:
@@ -49,3 +48,5 @@ services:
     volumes:
       - ./consumer-microservice:/usr/src/app/consumer-microservice
       - /usr/src/app/consumer-microservice/node_modules
+    depends_on:
+      - gateway-api
