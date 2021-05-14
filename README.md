@@ -24,8 +24,8 @@ messages he receives.
 `
 
 ## Check if containers are running
-`curl --location --request POST 'localhost:8080/player' \
---header 'Content-Type: application/json' \
+`curl --location --request POST 'localhost:8080/player' \  
+--header 'Content-Type: application/json' \  
 --data-raw '{ "playerId": 20, "score": 15, "timestamp": 1621016664 }'
 `
 
